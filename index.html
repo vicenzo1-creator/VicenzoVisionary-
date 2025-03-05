@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vicenzo Visionary</title>
   <style>
-    /* Reset & Font */
+    /* Reset & Global Styles */
     * {
       margin: 0;
       padding: 0;
@@ -13,17 +13,21 @@
       font-family: 'Arial', sans-serif;
     }
     body {
-      background-color: #f8f9fa;
+      background-color: #f0f2f5;
       color: #333;
       line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
     }
     /* Header */
     header {
       background: linear-gradient(90deg, #1e3c72, #2a5298);
-      color: white;
+      color: #fff;
       padding: 20px;
       text-align: center;
-      font-size: 32px;
+      font-size: 34px;
       font-weight: bold;
     }
     /* Navigasi */
@@ -35,169 +39,223 @@
       padding: 10px;
     }
     nav a {
-      color: white;
-      text-decoration: none;
+      color: #fff;
       padding: 12px 20px;
       font-size: 16px;
-      transition: 0.3s;
       margin: 5px;
+      transition: background 0.3s;
+      border-radius: 5px;
     }
     nav a:hover {
       background: rgba(255, 255, 255, 0.2);
-      border-radius: 5px;
     }
     /* Hero Section */
     .hero {
-      background: url('https://source.unsplasht      </div>
+      background: url('https://source.unsplash.com/1600x600/?education,technology') no-repeat center center/cover;
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      padding: 20px;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.3);
+    }
+    .hero h2 {
+      position: relative;
+      z-index: 1;
+    }
+    /* Section Styles */
+    section {
+      background: #fff;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 1000px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    section h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #1e3c72;
+      text-align: center;
+    }
+    section p {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #555;
+    }
+    section ul {
+      margin: 10px 30px;
+      list-style: disc;
+    }
+    section ul li {
+      margin: 8px 0;
+    }
+    /* Artikel Section */
+    .artikel {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .artikel .card {
+      background: #fafafa;
+      width: 300px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .artikel .card:hover {
+      transform: translateY(-5px);
+    }
+    .artikel img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .artikel .card-content {
+      padding: 15px;
+    }
+    .artikel .card-content h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #2a5298;
+    }
+    .artikel .card-content p {
+      font-size: 16px;
+      color: #555;
+    }
+    /* Footer */
+    footer {
+      background: #1e3c72;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    /* Responsif */
+    @media (max-width: 768px) {
+      header { font-size: 28px; }
+      .hero { font-size: 22px; height: 300px; }
+      nav a { padding: 10px 15px; font-size: 14px; }
+      section h1 { font-size: 24px; }
+      section p { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>Vicenzo Visionary</header>
+
+  <nav>
+    <a href="#home">Beranda</a>
+    <a href="#about">Tentang</a>
+    <a href="#tips">Tips Belajar</a>
+    <a href="#tech">Teknologi</a>
+    <a href="#artikel">Artikel</a>
+    <a href="#testimoni">Testimoni</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+
+  <div class="hero">
+    <h2>Belajar dengan benar, rajin, dan selalu berusaha</h2>
+  </div>
+
+  <section id="home">
+    <h1>Selamat Datang di Vicenzo Visionary</h1>
+    <p>Platform informasi yang menyediakan berbagai topik menarik seputar pendidikan, teknologi, dan kedokteran untuk menginspirasi dan mendidik generasi muda.</p>
+  </section>
+
+  <section id="about">
+    <h1>Tentang Kami</h1>
+    <p>Kami adalah tim yang berdedikasi untuk menyajikan informasi berkualitas dengan tampilan yang modern dan interaktif. Misi kami adalah memudahkan pelajar untuk mendapatkan ilmu dan inspirasi.</p>
+  </section>
+
+  <section id="tips">
+    <h1>📌 5 Tips Belajar Efektif</h1>
+    <ul>
+      <li><strong>Buat Jadwal Belajar</strong> – Tentukan waktu khusus setiap hari agar disiplin.</li>
+      <li><strong>Gunakan Teknik Pomodoro</strong> – Belajar 25 menit, istirahat 5 menit untuk menjaga fokus.</li>
+      <li><strong>Catat Poin Penting</strong> – Gunakan mind map atau catatan digital untuk mempermudah ingatan.</li>
+      <li><strong>Praktikkan Soal Latihan</strong> – Terapkan pengetahuan dengan latihan soal untuk memperkuat pemahaman.</li>
+      <li><strong>Istirahat yang Cukup</strong> – Tidur dan makan yang teratur agar tubuh dan pikiran selalu segar.</li>
+    </ul>
+  </section>
+
+  <section id="tech">
+    <h1>🔬 Teknologi Masa Depan</h1>
+    <ul>
+      <li><strong>Kecerdasan Buatan (AI)</strong> – Teknologi yang memungkinkan komputer berpikir dan belajar layaknya manusia.</li>
+      <li><strong>Metaverse</strong> – Dunia virtual yang membuka peluang baru untuk belajar dan berinteraksi.</li>
+      <li><strong>Robotika Kedokteran</strong> – Inovasi yang membantu dalam operasi dan diagnosis medis.</li>
+      <li><strong>Energi Terbarukan</strong> – Solusi untuk masa depan yang lebih hijau dan berkelanjutan.</li>
+    </ul>
+  </section>
+
+  <section id="artikel">
+    <h1>Artikel Terbaru</h1>
+    <div class="artikel">
+      <div class="card">
+        <img src="https://source.unsplash.com/300x180/?education" alt="Inovasi Pendidikan">
+        <div class="card-content">
+          <h3>Inovasi Pendidikan</h3>
+          <p>Bagaimana teknologi mengubah cara kita belajar di era digital.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/300x180/?technology" alt="Teknologi Kesehatan">
+        <div class="card-content">
+          <h3>Teknologi Kesehatan</h3>
+          <p>Perkembangan teknologi yang mendukung inovasi dalam bidang kesehatan.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/300x180/?inspiration" alt="Kisah Sukses">
+        <div class="card-content">
+          <h3>Kisah Sukses</h3>
+          <p>Inspirasi dari tokoh-tokoh sukses yang pernah mengalami kegagalan.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="testimoni">
     <h1>Testimoni</h1>
-    <p>"Website ini sangat membantu saya memahami dunia pendidikan dan teknologi. Informasinya jelas dan inspiratif!" - Andi</p>
-    <p>"Saya menemukan banyak tips berguna untuk belajar dengan efektif. Terima kasih, Vicenzo Visionary!" - Rina</p>
+    <p>"Vicenzo Visionary memberikan inspirasi dan informasi yang sangat berguna untuk saya dalam belajar." – Andi</p>
+    <p>"Desain website yang modern membuat saya betah mencari referensi di sini." – Rina</p>
   </section>
 
   <section id="faq">
     <h1>FAQ</h1>
     <ul>
-      <li><strong>Apa itu Vicenzo Visionary?</strong> - Platform informasi seputar pendidikan, teknologi, dan kedokteran.</li>
-      <li><strong>Siapa target penggunanya?</strong> - Terutama pelajar dan mahasiswa yang ingin mendapatkan informasi berkualitas.</li>
-      <li><strong>Bagaimana cara belajar efektif?</strong> - Lihat bagian Tips Belajar untuk strategi-strategi yang telah terbukti.</li>
+      <li><strong>Apa itu Vicenzo Visionary?</strong> – Platform informasi seputar pendidikan, teknologi, dan kedokteran.</li>
+      <li><strong>Siapa target penggunanya?</strong> – Terutama pelajar dan mahasiswa yang ingin mendapatkan informasi berkualitas.</li>
+      <li><strong>Bagaimana cara belajar efektif?</strong> – Lihat bagian Tips Belajar untuk strategi-strategi yang terbukti ampuh.</li>
     </ul>
   </section>
 
   <section id="contact">
-   
-            padding: 12px 20px;
-            font-size: 16px;
-            transition: 0.3s;
-        }
+    <h1>Hubungi Kami</h1>
+    <p>Email: <a href="mailto:fikrihaesulla@gmail.com">fikrihaesulla@gmail.com</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/fikri_haesulla" target="_blank">@fikri_haesulla</a></p>
+  </section>
 
-        nav a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: url('https://source.unsplash.com/1600x600/?education,technology') no-repeat center center/cover;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            padding: 20px;
-        }
-
-        /* Section */
-        section {
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 900px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 26px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #555;
-        }
-
-        ul {
-            text-align: left;
-            margin: 10px 30px;
-        }
-
-        /* Footer */
-        footer {
-            margin-top: 20px;
-            padding: 15px;
-            background: #1e3c72;
-            color: white;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-
-    <header>Vicenzo Visionary</header>
-
-    <nav>
-        <a href="#home">Beranda</a>
-        <a href="#about">Tentang</a>
-        <a href="#tips">Tips Belajar</a>
-        <a href="#tech">Teknologi</a>
-        <a href="#motivation">Motivasi</a>
-        <a href="#contact">Kontak</a>
-    </nav>
-
-    <div class="hero">
-        Belajar dengan benar, rajin, dan selalu berusaha
-    </div>
-
-    <section id="home">
-        <h1>Selamat Datang di Vicenzo Visionary</h1>
-        <p>Website ini didedikasikan untuk memberikan informasi umum, terutama bagi pelajar, dengan tampilan yang menarik dan informatif.</p>
-    </section>
-
-    <section id="about">
-        <h1>Tentang Kami</h1>
-        <p>Vicenzo Visionary adalah platform yang menyediakan informasi seputar dunia pendidikan, teknologi, dan kedokteran. Kami percaya bahwa belajar dengan benar, rajin, dan selalu berusaha akan membawa kesuksesan.</p>
-    </section>
-
-    <section id="tips">
-        <h1>📌 5 Tips Belajar Efektif</h1>
-        <ul>
-            <li><b>Buat Jadwal Belajar</b> – Tetapkan waktu belajar tetap tiap hari supaya lebih disiplin.</li>
-            <li><b>Gunakan Teknik Pomodoro</b> – Belajar 25 menit, istirahat 5 menit untuk tingkatkan fokus.</li>
-            <li><b>Catat Poin Penting</b> – Gunakan mind map atau highlight buku agar lebih mudah diingat.</li>
-            <li><b>Praktikkan Soal Latihan</b> – Jangan cuma baca, coba latihan soal biar makin paham.</li>
-            <li><b>Tidur & Makan yang Cukup</b> – Jangan begadang! Otak butuh istirahat untuk memproses informasi.</li>
-        </ul>
-    </section>
-
-    <section id="tech">
-        <h1>🔬 Teknologi Masa Depan yang Wajib Kamu Ketahui!</h1>
-        <ul>
-            <li><b>Kecerdasan Buatan (AI)</b> – Teknologi yang membuat komputer bisa berpikir seperti manusia.</li>
-            <li><b>Metaverse</b> – Dunia virtual yang bisa digunakan buat belajar, kerja, dan bersosialisasi.</li>
-            <li><b>Robotika dalam Kedokteran</b> – Robot sekarang sudah bisa membantu operasi medis dan diagnosis penyakit!</li>
-            <li><b>Energi Terbarukan</b> – Teknologi solar panel dan baterai semakin canggih untuk masa depan yang lebih hijau.</li>
-        </ul>
-    </section>
-
-    <section id="motivation">
-        <h1>🔥 Motivasi & Inspirasi</h1>
-        <p>"Kesuksesan bukan tentang siapa yang paling pintar, tapi siapa yang paling tekun dan terus berusaha!"</p>
-        <h3>Kisah Sukses Anak Muda:</h3>
-        <ul>
-            <li><b>Elon Musk</b> – Dulu sering dibully, tapi sekarang jadi pengusaha teknologi sukses!</li>
-            <li><b>B.J. Habibie</b> – Dari Indonesia, jadi ilmuwan pesawat terkenal di dunia.</li>
-            <li><b>Dr. William Tan</b> – Seorang dokter dan atlet difabel yang tetap berjuang tanpa menyerah.</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h1>Hubungi Kami</h1>
-        <p>Email: <a href="mailto:fikrihaesulla@gmail.com">fikrihaesulla@gmail.com</a></p>
-        <p>Instagram: <a href="https://www.instagram.com/fikri_haesulla" target="_blank">@fikri_haesulla</a></p>
-    </section>
-
-    <footer>
-        &copy; 2025 Vicenzo Visionary. All rights reserved.
-    </footer>
+  <footer>
+    &copy; 2025 Vicenzo Visionary. All rights reserved.
+  </footer>
 
 </body>
 </html>
