@@ -103,13 +103,13 @@
       margin: 8px 0;
     }
     /* Artikel Section */
-    .artikel {
+    .artikel, .berita, .event, .portfolio, .resources {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
     }
-    .artikel .card {
+    .artikel .card, .berita .card, .event .card, .portfolio .card, .resources .card {
       background: #fafafa;
       width: 300px;
       border-radius: 8px;
@@ -117,23 +117,23 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       transition: transform 0.3s;
     }
-    .artikel .card:hover {
+    .artikel .card:hover, .berita .card:hover, .event .card:hover, .portfolio .card:hover, .resources .card:hover {
       transform: translateY(-5px);
     }
-    .artikel img {
+    .artikel img, .berita img, .event img, .portfolio img, .resources img {
       width: 100%;
       height: 180px;
       object-fit: cover;
     }
-    .artikel .card-content {
+    .card-content {
       padding: 15px;
     }
-    .artikel .card-content h3 {
+    .card-content h3 {
       font-size: 20px;
       margin-bottom: 10px;
       color: #2a5298;
     }
-    .artikel .card-content p {
+    .card-content p {
       font-size: 16px;
       color: #555;
     }
@@ -165,6 +165,10 @@
     <a href="#tips">Tips Belajar</a>
     <a href="#tech">Teknologi</a>
     <a href="#artikel">Artikel</a>
+    <a href="#berita">Berita</a>
+    <a href="#event">Event</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#resources">Sumber Daya</a>
     <a href="#testimoni">Testimoni</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Kontak</a>
@@ -181,7 +185,7 @@
 
   <section id="about">
     <h1>Tentang Kami</h1>
-    <p>Kami adalah tim yang berdedikasi untuk menyajikan informasi berkualitas dengan tampilan yang modern dan interaktif. Misi kami adalah memudahkan pelajar untuk mendapatkan ilmu dan inspirasi.</p>
+    <p>Kami adalah tim yang berdedikasi untuk menyajikan informasi berkualitas dengan tampilan yang modern dan interaktif. Misi kami adalah memudahkan pelajar untuk mendapatkan ilmu dan inspirasi melalui konten yang variatif.</p>
   </section>
 
   <section id="tips">
@@ -198,10 +202,10 @@
   <section id="tech">
     <h1>🔬 Teknologi Masa Depan</h1>
     <ul>
-      <li><strong>Kecerdasan Buatan (AI)</strong> – Teknologi yang memungkinkan komputer berpikir dan belajar layaknya manusia.</li>
+      <li><strong>Kecerdasan Buatan (AI)</strong> – Teknologi yang memungkinkan komputer berpikir dan belajar seperti manusia.</li>
       <li><strong>Metaverse</strong> – Dunia virtual yang membuka peluang baru untuk belajar dan berinteraksi.</li>
-      <li><strong>Robotika Kedokteran</strong> – Inovasi yang membantu dalam operasi dan diagnosis medis.</li>
-      <li><strong>Energi Terbarukan</strong> – Solusi untuk masa depan yang lebih hijau dan berkelanjutan.</li>
+      <li><strong>Robotika Kedokteran</strong> – Inovasi untuk membantu operasi dan diagnosa medis dengan presisi tinggi.</li>
+      <li><strong>Energi Terbarukan</strong> – Solusi teknologi untuk masa depan yang lebih hijau dan berkelanjutan.</li>
     </ul>
   </section>
 
@@ -219,14 +223,94 @@
         <img src="https://source.unsplash.com/300x180/?technology" alt="Teknologi Kesehatan">
         <div class="card-content">
           <h3>Teknologi Kesehatan</h3>
-          <p>Perkembangan teknologi yang mendukung inovasi dalam bidang kesehatan.</p>
+          <p>Perkembangan inovasi dalam bidang kesehatan yang mengubah masa depan medis.</p>
         </div>
       </div>
       <div class="card">
         <img src="https://source.unsplash.com/300x180/?inspiration" alt="Kisah Sukses">
         <div class="card-content">
           <h3>Kisah Sukses</h3>
-          <p>Inspirasi dari tokoh-tokoh sukses yang pernah mengalami kegagalan.</p>
+          <p>Inspirasi dari tokoh-tokoh sukses yang pernah mengalami tantangan besar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="berita">
+    <h1>Berita Terkini</h1>
+    <div class="berita">
+      <div class="card">
+        <img src="https://source.unsplash.com/300x180/?news,education" alt="Berita 1">
+        <div class="card-content">
+          <h3>Update Pendidikan</h3>
+          <p>Berita terbaru seputar inovasi di dunia pendidikan dan kebijakan pemerintah.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/300x180/?news,technology" alt="Berita 2">
+        <div class="card-content">
+          <h3>Teknologi Terkini</h3>
+          <p>Informasi tentang kemajuan teknologi dan startup yang sedang naik daun.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="event">
+    <h1>Event & Webinar</h1>
+    <div class="event">
+      <div class="card">
+        <img src="https://source.unsplash.com/300x180/?webinar" alt="Event 1">
+        <div class="card-content">
+          <h3>Webinar Pendidikan</h3>
+          <p>Ikuti webinar seputar inovasi pendidikan dengan pembicara profesional.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/300x180/?conference" alt="Event 2">
+        <div class="card-content">
+          <h3>Konferensi Teknologi</h3>
+          <p>Acara tahunan untuk membahas tren teknologi masa depan secara mendalam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h1>Portfolio & Proyek</h1>
+    <div class="portfolio">
+      <div class="card">
+        <img src="https://source.unsplash.com/300x180/?project" alt="Proyek 1">
+        <div class="card-content">
+          <h3>Proyek Edukasi</h3>
+          <p>Proyek inovatif yang menggabungkan teknologi dan pendidikan untuk hasil maksimal.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/300x180/?design" alt="Proyek 2">
+        <div class="card-content">
+          <h3>Desain Interaktif</h3>
+          <p>Contoh proyek desain website modern dan interaktif untuk berbagai platform.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources">
+    <h1>Sumber Daya & Referensi</h1>
+    <div class="resources">
+      <div class="card">
+        <img src="https://source.unsplash.com/300x180/?books" alt="Referensi 1">
+        <div class="card-content">
+          <h3>Buku & E-Book</h3>
+          <p>Rekomendasi buku dan e-book terbaik untuk menambah wawasan pendidikan dan teknologi.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/300x180/?tutorial" alt="Referensi 2">
+        <div class="card-content">
+          <h3>Video Tutorial</h3>
+          <p>Link video pembelajaran yang dapat membantu pelajar memahami materi lebih mendalam.</p>
         </div>
       </div>
     </div>
@@ -243,7 +327,8 @@
     <ul>
       <li><strong>Apa itu Vicenzo Visionary?</strong> – Platform informasi seputar pendidikan, teknologi, dan kedokteran.</li>
       <li><strong>Siapa target penggunanya?</strong> – Terutama pelajar dan mahasiswa yang ingin mendapatkan informasi berkualitas.</li>
-      <li><strong>Bagaimana cara belajar efektif?</strong> – Lihat bagian Tips Belajar untuk strategi-strategi yang terbukti ampuh.</li>
+      <li><strong>Bagaimana cara belajar efektif?</strong> – Lihat bagian Tips Belajar untuk strategi yang terbukti ampuh.</li>
+      <li><strong>Di mana saya bisa menemukan sumber daya belajar?</strong> – Bagian Sumber Daya & Referensi menyediakan rekomendasi buku dan video tutorial.</li>
     </ul>
   </section>
 
